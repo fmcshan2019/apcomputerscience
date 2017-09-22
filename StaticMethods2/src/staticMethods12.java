@@ -6,7 +6,7 @@ public class staticMethods12 {
 	}
 	
 	public static void main(String[] args) {
-		helloWorld2();
+		helloWorld2(); //added to github
 	}
 
 }
