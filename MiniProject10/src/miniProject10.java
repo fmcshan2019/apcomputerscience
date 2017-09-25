@@ -11,8 +11,8 @@ public class miniProject10 {
 		
 		inches = reader.nextInt();
 		
-		inchTotalMale = (inches - 60) * 7 + 106;
-		inchTotalFemale = (inches - 60) * 6 + 100;
+		inchTotalMale = 106 + (inches - 60) * 7;
+		inchTotalFemale = 100 + (inches - 60) * 6;
 		
 		System.out.println("Recommended Male Weight: " + inchTotalMale);
 		System.out.println("Recommended Female Weight: " + inchTotalFemale);
