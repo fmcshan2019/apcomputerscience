@@ -16,29 +16,34 @@ public class conditionalProject { //class
 	}
 	
 	public static int findLargest(int num10, int num11, int num12) { //creates three integer variables as parameters, return value will be an integer
-		int newNum10 = Math.abs(num10); //absolute value of num10 = newNum10
-		int newNum11 = Math.abs(num11); //absolute value of num11 = newNum11
-		int newNum12 = Math.abs(num12); //absolute value of num12 = newNum12
-		
-		if (newNum10 > newNum11) { //check if newNum10 is greater than newNum11
-			if (newNum10 > newNum12) { //if true, check if newNum10 is greater than newNum12
-				return newNum10; //if true, return newNum10
+		if (num10 < 0) { //use absolute value method to find absolute value of num10
+			absValue(num10);
+		}
+		if (num11 < 0) {  //use absolute value method to find absolute value of num11
+			absValue(num11);
+		}
+		if (num12 < 0) {  //use absolute value method to find absolute value of num12
+			absValue(num12);
+		}
+		if (num10 > num11) { //check if newNum10 is greater than newNum11
+			if (num10 > num12) { //if true, check if newNum10 is greater than newNum12
+				return num10; //if true, return newNum10
 			}
 		}
-		if (newNum11 > newNum10) { //check if newNum11 is greater than newNum10
-			if (newNum11 > newNum12) { //if true, check if newNum11 is greater than newNum12
-				return newNum11; //if true, return newNum11
+		if (num11 > num10) { //check if newNum11 is greater than newNum10
+			if (num11 > num12) { //if true, check if newNum11 is greater than newNum12
+				return num11; //if true, return newNum11
 			}
 		}
-		if (newNum12 > newNum10) { //check if newNum12 is greater than newNum10
-			if (newNum12 > newNum11) { //if true, check if newNum12 is greater than newNum11
-				return newNum12; //if true, return newNum12
+		if (num12 > num10) { //check if newNum12 is greater than newNum10
+			if (num12 > num11) { //if true, check if newNum12 is greater than newNum11
+				return num12; //if true, return newNum12
 			}
 		}
-		return newNum12; //return answer if all are false
+		return num12; //return answer if all are false
 	}
 	public static void main(String[] args) {
 		System.out.println(absValue(-6)); //test -6 and absolute value becomes 6 (6 is printed)
-		System.out.println(findLargest(3,12,1)); //test 3 random integers and 12 in printed
+		System.out.println(findLargest(-3,12,1)); //test 3 random integers and 12 is printed
 	}
 }
