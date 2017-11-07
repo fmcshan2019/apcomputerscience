@@ -6,12 +6,11 @@ public class Problem3 {
 		String firstLength = (x.substring(index, index + 3));
 		int secondLength = firstLength.length();
 		
-		answer = x.substring(index, index + 3);
+			answer = x.substring(index, index + 3);
 		
-		if () {
+			if (firstLength.length() > index) {
 			answer = x.substring(0, 4);
-		}
-		
+			}
 		return answer;
 	}
 	public static void main(String[] args) {
@@ -24,6 +23,10 @@ public class Problem3 {
 		System.out.print("Please enter an index: "); //statement that asks the user to input an index
 		inputIndex = in.nextInt();
 		
+		while (inputString.length() < 3) {
+			System.out.print("Please enter a string with three or more characters: ");
+			inputString = in.nextLine();
+		}
 		
 		System.out.println(threeChars(inputString, inputIndex)); //print the answer on a new line by plugging in user's input into the method withoutEnds
 
