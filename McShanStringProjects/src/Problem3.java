@@ -5,12 +5,13 @@ public class Problem3 {
 		int length = x.length();
 		String firstLength = (x.substring(index, index + 3));
 		int secondLength = firstLength.length();
-		
+
 			answer = x.substring(index, index + 3);
 		
-			if (firstLength.length() > index) {
+		if (index + 3 > length) {
 			answer = x.substring(0, 4);
-			}
+		}
+		
 		return answer;
 	}
 	public static void main(String[] args) {
@@ -27,6 +28,7 @@ public class Problem3 {
 			System.out.print("Please enter a string with three or more characters: ");
 			inputString = in.nextLine();
 		}
+		
 		
 		System.out.println(threeChars(inputString, inputIndex)); //print the answer on a new line by plugging in user's input into the method withoutEnds
 
