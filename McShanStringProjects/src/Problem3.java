@@ -1,15 +1,13 @@
 import java.util.Scanner;
 public class Problem3 {
 	public static String threeChars(String x, int index) {
-		String answer;
+		String answer = "";
 		int length = x.length();
-		String firstLength = (x.substring(index, index + 3));
-		int secondLength = firstLength.length();
-
-			answer = x.substring(index, index + 3);
 		
-		if (index + 3 > length) {
-			answer = x.substring(0, 4);
+		if (index < length - 2 && index >= 0) {
+			answer = x.substring(index, index + 3);
+		} else {
+			answer = x.substring(0, 3);
 		}
 		
 		return answer;
