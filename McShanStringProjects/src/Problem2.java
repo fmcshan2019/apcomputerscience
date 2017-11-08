@@ -1,8 +1,12 @@
 //Frank McShan -- user enters a string and that string minus the first and last characters are returned
+
 import java.util.Scanner; //imports scanner
+
 public class Problem2 { //class
+	
 	//method that accepts a string parameter 'x' and returns it minus its first and last character as a string
 	public static String withoutEnds(String x) {
+		
 		String answer; //declares string variable that will return the answer
 		int length1 = x.length() - 1; //takes the length of the string minus 1 to be used to remove the last character
 		int length2 = x.length() - length1; //takes the length of the string minus the answer above to reach where the first character lies
@@ -15,7 +19,9 @@ public class Problem2 { //class
 		
 		return answer; //returns the final answer
 	}
+	
 	public static void main(String[] args) {
+		
 		String input = ""; //declares and initializes String variable
 		
 		Scanner in = new Scanner(System.in); //creates the scanner in
@@ -23,6 +29,7 @@ public class Problem2 { //class
 		input = in.nextLine(); //assigns user's input to the input variable
 		
 		System.out.println(withoutEnds(input)); //print the answer on a new line by plugging in user's input into the method withoutEnds
+	
+		in.close(); //closes the scanner
 	}
-
 }
