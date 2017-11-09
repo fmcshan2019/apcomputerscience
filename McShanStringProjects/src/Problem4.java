@@ -13,14 +13,12 @@ public class Problem4 { //class
 		partOne = x.indexOf("a"); //finds the index at which 'a' appears in the string
 		partTwo = x.indexOf("aa"); //finds the index at which 'aa' appears in the string\
 		
-		if (partTwo > partOne) { //checks if index of 'aa' is greater than that of 'a'
+		if (partTwo > partOne && partTwo >= 0 && partOne >= 0) { //checks if index of 'aa' is greater than that of 'a' AND partTwo AND partOne are both greater than or equal to 0
 			answer = false; //if true, false will be returned
-		} else {
-			answer = true; //else, it will return true
-		}
-		
-		if (partOne == 0) { //will check to see if the index of 'a' is 0
+		} else if (partOne > partTwo && partOne >= 0){ //check if partOne is greater than partTwo AND partOne is greater than or equal to 0
 			answer = false; //if true, it will return false
+		} else { //else, if all previous statements fail condition test
+			answer = true; //return true
 		}
 		
 		return answer; //returns the answer (either true or false)
